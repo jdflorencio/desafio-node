@@ -1,0 +1,185 @@
+[
+	{
+		"name": "bulbasaur",
+		"base_experience": 64,
+		"type": "grass",
+		"abilities": [
+			"overgrow",
+			"chlorophyll"
+		]
+	},
+	{
+		"name": "ivysaur",
+		"base_experience": 142,
+		"type": "grass",
+		"abilities": [
+			"overgrow",
+			"chlorophyll"
+		]
+	},
+	{
+		"name": "venusaur",
+		"base_experience": 263,
+		"type": "grass",
+		"abilities": [
+			"overgrow",
+			"chlorophyll"
+		]
+	},
+	{
+		"name": "charmander",
+		"base_experience": 62,
+		"type": "fire",
+		"abilities": [
+			"blaze",
+			"solar-power"
+		]
+	},
+	{
+		"name": "charmeleon",
+		"base_experience": 142,
+		"type": "fire",
+		"abilities": [
+			"blaze",
+			"solar-power"
+		]
+	},
+	{
+		"name": "charizard",
+		"base_experience": 267,
+		"type": "fire",
+		"abilities": [
+			"blaze",
+			"solar-power"
+		]
+	},
+	{
+		"name": "squirtle",
+		"base_experience": 63,
+		"type": "water",
+		"abilities": [
+			"torrent",
+			"rain-dish"
+		]
+	},
+	{
+		"name": "wartortle",
+		"base_experience": 142,
+		"type": "water",
+		"abilities": [
+			"torrent",
+			"rain-dish"
+		]
+	},
+	{
+		"name": "blastoise",
+		"base_experience": 265,
+		"type": "water",
+		"abilities": [
+			"torrent",
+			"rain-dish"
+		]
+	},
+	{
+		"name": "caterpie",
+		"base_experience": 39,
+		"type": "bug",
+		"abilities": [
+			"shield-dust",
+			"run-away"
+		]
+	},
+	{
+		"name": "metapod",
+		"base_experience": 72,
+		"type": "bug",
+		"abilities": [
+			"shed-skin"
+		]
+	},
+	{
+		"name": "butterfree",
+		"base_experience": 198,
+		"type": "bug",
+		"abilities": [
+			"compound-eyes",
+			"tinted-lens"
+		]
+	},
+	{
+		"name": "weedle",
+		"base_experience": 39,
+		"type": "bug",
+		"abilities": [
+			"shield-dust",
+			"run-away"
+		]
+	},
+	{
+		"name": "kakuna",
+		"base_experience": 72,
+		"type": "bug",
+		"abilities": [
+			"shed-skin"
+		]
+	},
+	{
+		"name": "beedrill",
+		"base_experience": 178,
+		"type": "bug",
+		"abilities": [
+			"swarm",
+			"sniper"
+		]
+	},
+	{
+		"name": "pidgey",
+		"base_experience": 50,
+		"type": "normal",
+		"abilities": [
+			"keen-eye",
+			"tangled-feet",
+			"big-pecks"
+		]
+	},
+	{
+		"name": "pidgeotto",
+		"base_experience": 122,
+		"type": "normal",
+		"abilities": [
+			"keen-eye",
+			"tangled-feet",
+			"big-pecks"
+		]
+	},
+	{
+		"name": "pidgeot",
+		"base_experience": 216,
+		"type": "normal",
+		"abilities": [
+			"keen-eye",
+			"tangled-feet",
+			"big-pecks"
+		]
+	},
+	{
+		"name": "rattata",
+		"base_experience": 51,
+		"type": "normal",
+		"abilities": [
+			"run-away",
+			"guts",
+			"hustle"
+		]
+	},
+	{
+		"name": "raticate",
+		"base_experience": 145,
+		"type": "normal",
+		"abilities": [
+			"run-away",
+			"guts",
+			"hustle"
+		]
+	}
+]
