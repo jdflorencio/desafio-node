@@ -1,26 +1,5 @@
-
-//import axios from 'axios';
 const axios = require('axios');
-
-
-
-/*
-  DEIXEI COMENTADO O IMPORT AQUI NO PLAYCODE DEVIDO 
-  GERAR UM ERRO QUANDO TEM ESSE PACOTE INSTALADO
-  TENTEI RESOLVER O ERRO E NÃO DEU CERTO
-
-
-  PS: NO MEU COMPUTADOR ESCREVENDO O AQUIVO DIRETO NO PC MESMO FUNCIOU 
-
-  [{
-    name: 'raticate',
-    base_experience: 145,
-    type: 'normal',
-    abilities: [ 'run-away', 'guts', 'hustle' ]
-  }]
-
-*/
-
+var fs = require('fs');
 
 // pegar uma lista de 20 pokemons com a api: https://pokeapi.co/api/v2/pokemon/
 // para cada pokemon listado, coletar as informações dele em: https://pokeapi.co/api/v2/pokemon/:nome_pokemon
@@ -29,7 +8,7 @@ const axios = require('axios');
 // base_experience: int,
 // type: string,
 // abilities: array
- 
+
 //retornar os dados em um array
 
 let url = "https://pokeapi.co/api/v2/pokemon/";
@@ -41,8 +20,15 @@ async function informacoesPokemon(name) {
     return {
         base_experience: informacoesPokemons.data.base_experience,
         type: informacoesPokemons.data.types[0].type.name,
-        abilities: informacoesPokemons.data.abilities.map(a => a.ability.name),
+        abilities: informacoesPokemons.data.abilities.map((a) => a.ability.name),
     }
+}
+
+async function salveArquivos(data) {
+    fs.writeFile("pokemons.json", data, function (error) {
+        if (error) console.log('não pude salvar')
+        console.log("Arquivo salvo");
+    });
 }
 
 async function principal() {
@@ -56,8 +42,20 @@ async function principal() {
         base.push(pokemon)
     }
 
-    console.log(base)
+    console.log(JSON.stringify(base, null, '\t'))
+    salveArquivos(JSON.stringify(base, null, '\t'))
 }
 
 
+
 principal()
+
+/*
+ axios.get(url)
+  .then(function (response) {    
+    let data = response.data.results
+   
+    
+    });
+
+  })*/
