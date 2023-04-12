@@ -25,7 +25,7 @@ async function informacoesPokemon(name) {
 }
 
 async function salveArquivos(data) {
-    fs.writeFile("pokemons.json", data, function (error) {
+    await fs.writeFile("pokemons.json", data, function (error) {
         if (error) console.log('não pude salvar')
         console.log("Arquivo salvo");
     });
