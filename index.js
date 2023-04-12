@@ -1,5 +1,7 @@
 const axios = require('axios');
-var fs = require('fs');
+const { promisify } = require('util');
+const fs = require('fs');
+const readFileAsync = promisify(fs.readFile);
 
 // pegar uma lista de 20 pokemons com a api: https://pokeapi.co/api/v2/pokemon/
 // para cada pokemon listado, coletar as informações dele em: https://pokeapi.co/api/v2/pokemon/:nome_pokemon
@@ -25,10 +27,20 @@ async function informacoesPokemon(name) {
 }
 
 async function salveArquivos(data) {
-    await fs.writeFile("pokemons.json", data, function (error) {
+    await fs.writeFile("pokemons.txt", data, function (error) {
         if (error) console.log('não pude salvar')
         console.log("Arquivo salvo");
     });
+}
+
+async function getSalvos() {
+    try {
+
+        return await readFileAsync("pokemons.txt", 'utf8')
+
+    } catch (error) {
+        console.log("nao foi possivel abri o arquivo", error)
+    }
 }
 
 async function principal() {
@@ -42,20 +54,9 @@ async function principal() {
         base.push(pokemon)
     }
 
-    console.log(JSON.stringify(base, null, '\t'))
-    salveArquivos(JSON.stringify(base, null, '\t'))
+    await salveArquivos(JSON.stringify(base, null, '\t'))
+    console.log(await getSalvos())
 }
 
 
-
 principal()
-
-/*
- axios.get(url)
-  .then(function (response) {    
-    let data = response.data.results
-   
-    
-    });
-
-  })*/
